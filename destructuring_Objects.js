@@ -30,8 +30,6 @@ const restaurant = {
             ${address} at ${time}`);
 
       }
-
-
   };
 
 
