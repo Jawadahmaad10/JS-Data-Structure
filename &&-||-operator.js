@@ -22,6 +22,12 @@ const guests2 = restaurant.numGuests || 10;
 
 
 console.log('------ AND ----------');
+// Behavior of the && Operator
+// The && operator in JavaScript:
+
+// Evaluates expressions from left to right.
+// Stops and returns the first falsy value it encounters.
+// If all values are truthy, it returns the last value.
 
 console.log( 0 && 'J');
 console.log(7 && 'Jawad');
