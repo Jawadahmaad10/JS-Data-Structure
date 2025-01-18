@@ -51,7 +51,7 @@ const user = {
     job: 'Developer'
   };
   
-  console.log(Object.keys(user)); 
+//   console.log(Object.keys(user)); 
   // Output: ['name', 'age', 'job']
 
 
@@ -60,5 +60,24 @@ let openStr =`We are open on ${properties.length} days:`;
   for (const day of properties){
    openStr += `${day}`;
   }
+
+
+  //Property Values 
+
+const values = Object.values(openingHours);
+// console.log(values);  
+
+
+
+// Entire Object
+
+const entries = Object.entries(openingHours);
+console.log(entries);
+
+
+// destructuring in arrays
+for(const [key , {open,close}] of entries){
+    console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
 
 
