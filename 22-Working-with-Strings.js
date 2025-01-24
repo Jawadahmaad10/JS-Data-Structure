@@ -57,3 +57,26 @@ console.log(plane.includes('A320'));
 console.log(plane.includes('Boeing'));
 console.log(plane.includes('Air'));
 
+
+if(plane.startsWith('Airbus') && plane.endsWith('neo')){
+  console.log('Part of the NEW AirBus family');  
+}
+
+
+//Practice exercise
+
+const checkBaggage = function(items){
+  const baggage = items.toLowerCase;
+  if(baggage.includes('knife') || baggage.includes('gun')){
+    console.log('You are not allowed on Board');
+  }
+  else{
+    console.log('Welcome aboard!');
+  }
+}
+
+
+checkBaggage('I have a laptop,some Food and a pocket Knife');
+checkBaggage('Socks and Camera');
+checkBaggage('Got some snacks and a gun for protection');
+
