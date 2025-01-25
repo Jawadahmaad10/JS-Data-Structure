@@ -37,8 +37,8 @@ capitalizeName('javascript development is the best');
 //PadStart
 
 const message = 'Go to gate 23!';
-console.log(message.padStart(25, '+'));
+console.log(message.padStart(25, '+').padEnd(30,'+'));
 console.log('Jawad'.padStart(23,'+'));
 
 
-//
+
