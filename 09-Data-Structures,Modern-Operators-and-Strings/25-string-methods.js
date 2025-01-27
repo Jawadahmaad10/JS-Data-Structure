@@ -17,3 +17,5 @@ const output = `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replaceAll(
 console.log(output);
 }
 
+
+9()
