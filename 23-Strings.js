@@ -41,4 +41,28 @@ console.log(message.padStart(25, '+').padEnd(30,'+'));
 console.log('Jawad'.padStart(23,'+'));
 
 
+const maskCreditCard = function(number){
+ const str = number + '';
+ const last = str.slice(-4);
+ return last.padStart(str.length , '*');
+}
+
+console.log(maskCreditCard(64637836));
+console.log(maskCreditCard(43378463864647384));
+
+
+
+// Repeat Method
+
+
+const message2 = 'Bad weather ... All Departures Delayed...';
+console.log(message2.repeat(5));
+
+
+
+const planeinline = function(n){
+   console.log(`Thereare ${n} plane in line repeat(n)`);
+}
+
+planeinline(5);
 
