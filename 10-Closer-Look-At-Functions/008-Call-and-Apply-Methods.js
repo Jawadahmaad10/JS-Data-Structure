@@ -21,7 +21,7 @@ console.log(lufthansa);
 
 
 const eurowings = {
- name: 'Eurowings',
+ airline: 'Eurowings',
  iataCode: 'EW',
  bookings: [],
 };
@@ -35,7 +35,7 @@ const book = lufthansa.book;
 // book(23 , 'Sarah Williams');
 
 // Functions have methods too...
-
+//Call method
 book.call(eurowings,23,'Lionel');
 console.log(eurowings);
 
@@ -50,3 +50,12 @@ const swiss = {
 
 
 book.call(swiss,583 , 'Mary Cooper');
+console.log(swiss);
+
+
+
+//Apply method
+
+const flightData = [583, 'Goerge Cooper'];
+book.apply(swiss,flightData);
+console.log(swiss);
