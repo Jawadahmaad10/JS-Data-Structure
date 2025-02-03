@@ -31,9 +31,10 @@ const eurowings = {
 
 const book = lufthansa.book;
 
-
+// Does NOT work -> this keyword
 // book(23 , 'Sarah Williams');
 
+//we use it then
 // Functions have methods too...
 //Call method
 book.call(eurowings,23,'Lionel');
@@ -59,3 +60,11 @@ console.log(swiss);
 const flightData = [583, 'Goerge Cooper'];
 book.apply(swiss,flightData);
 console.log(swiss);
+
+
+book.call(swiss,...flightData);
+
+
+
+// Use .call() when you know the exact number of arguments and pass them one by one.
+// Use .apply() when you have an array of arguments (e.g., from user input or an API response).
