@@ -83,3 +83,21 @@ bookLX(25 , 'Barcelona');
 
 const we = lufthansa.book.bind(swiss);
 we(21,'jawad');
+
+
+
+
+// With Event Listeners
+
+lufthansa.planes = 300;
+lufthansa.buyPlane = function(){
+    console.log(this);
+    //this keyword refers to the element buy
+    this.planes ++; 
+    console.log(this.planes); 
+}
+// // Why Use .bind(lufthansa)?
+// Without .bind(lufthansa), this inside buyPlane would refer to the button that was clicked (because event listeners change the this context to the element they are attached to).
+// .bind(lufthansa) explicitly sets this to lufthansa, making sure the method behaves as expected.
+
+document.querySelector('.buy').addEventListener('click',lufthansa.buyPlane.bind(lufthansa));
