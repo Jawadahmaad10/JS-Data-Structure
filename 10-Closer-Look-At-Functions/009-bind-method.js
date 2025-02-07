@@ -101,3 +101,27 @@ lufthansa.buyPlane = function(){
 // .bind(lufthansa) explicitly sets this to lufthansa, making sure the method behaves as expected.
 
 document.querySelector('.buy').addEventListener('click',lufthansa.buyPlane.bind(lufthansa));
+
+
+// Partial application
+
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(10 , 200));
+
+//first argument of bind is this keyword
+// in this case we put null
+const addVAT = addTax.bind(null,0.23);
+// addVAT = value => value + value * 0.23
+
+
+
+console.log(addVAT(100));
+console.log(addVAT(23));
+
+
+
+
+const addVAT2 = addTaxRate(0.23);
+console.log(addVAT2(100));
+console.log(addVAT2(100));
+
