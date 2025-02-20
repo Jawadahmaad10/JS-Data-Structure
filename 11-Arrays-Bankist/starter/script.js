@@ -120,3 +120,12 @@ const calcDisplaySummary = function(movements){
 }
 
 calcDisplaySummary(account1.movements);
+
+
+//Event handler
+
+btnLogin.addEventListener('click', function(e){
+  //Prevent form from submitting  
+  e.preventDefault();
+  console.log('Login');
+});
