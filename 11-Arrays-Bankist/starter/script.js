@@ -121,11 +121,47 @@ const calcDisplaySummary = function(movements){
 
 calcDisplaySummary(account1.movements);
 
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+createUsernames(accounts);
 
 //Event handler
+
+let currentAccount;
 
 btnLogin.addEventListener('click', function(e){
   //Prevent form from submitting  
   e.preventDefault();
   console.log('Login');
+
+
+ currentAccount =  accounts.find(acc => acc.username === inputLoginUsername.value);
+
+ if(currentAccount?.pin === Number(inputLoginPin.value)){
+  console.log('LOGIN');
+
+  // Display UI and  message
+   labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split('')[0]}` ;
+   
+   containerApp.computedStyleMap.opacity = 100;
+
+
+  // Display movements
+
+
+  //Display balance
+
+
+  //Display summary
+
+
+
+ }
 });
